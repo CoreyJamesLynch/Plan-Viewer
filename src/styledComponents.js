@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-const TestHeader = styled.h1`
-  color: orange;
+const Container = styled.div`
+  display: flex;
+  width: 90vw;
 `;
 
-export default TestHeader;
+export default Container;

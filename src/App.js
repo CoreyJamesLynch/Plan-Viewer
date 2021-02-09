@@ -1,8 +1,8 @@
 import React from 'react';
-import TestHeader from './styledComponents';
+import Container from './styledComponents';
 
 function App() {
-  return <TestHeader>Hello Corey</TestHeader>;
+  return <Container>Hello Corey</Container>;
 }
 
 export default App;
