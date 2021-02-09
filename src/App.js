@@ -1,10 +1,12 @@
 import React from 'react';
-import Container, { Panel } from './styledComponents';
+import Container, { Panel, PanelHeader } from './styledComponents';
 
 function App() {
   return (
     <Container>
-      <Panel>This is a panel</Panel>
+      <Panel>
+        <PanelHeader>Iceland</PanelHeader>
+      </Panel>
     </Container>
   );
 }

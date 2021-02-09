@@ -7,5 +7,7 @@ const Container = styled.div`
 
 const Panel = styled.div``;
 
+const PanelHeader = styled.h3``;
+
 export default Container;
-export { Panel };
+export { Panel, PanelHeader };
