@@ -1,7 +1,8 @@
 import React from 'react';
+import TestHeader from './styledComponents';
 
 function App() {
-  return <></>;
+  return <TestHeader>Hello Corey</TestHeader>;
 }
 
 export default App;
