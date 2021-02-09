@@ -1,14 +1,20 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import CountryPanel from './Components/CountryPanel';
 import Countries from './data';
 // import Container, { Panel, PanelHeader } from './styledComponents';
 
-const App = () => {
-  console.log(Countries.map((country) => console.log(country)));
-  return (
-    <>
-      <h1>Hello World</h1>
-    </>
-  );
-};
+class App extends React.Component {
+  render() {
+    const vacations = Countries.map((country) => (
+      <CountryPanel
+        key={country.id}
+        countryName={country.name}
+        countryImg={country.img}
+      />
+    ));
+    return <>{vacations}</>;
+  }
+}
 
 export default App;
