@@ -5,4 +5,7 @@ const Container = styled.div`
   width: 90vw;
 `;
 
+const Panel = styled.div``;
+
 export default Container;
+export { Panel };

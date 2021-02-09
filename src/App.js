@@ -1,8 +1,12 @@
 import React from 'react';
-import Container from './styledComponents';
+import Container, { Panel } from './styledComponents';
 
 function App() {
-  return <Container>Hello Corey</Container>;
+  return (
+    <Container>
+      <Panel>This is a panel</Panel>
+    </Container>
+  );
 }
 
 export default App;
