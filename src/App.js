@@ -1,14 +1,14 @@
 import React from 'react';
-import Container, { Panel, PanelHeader } from './styledComponents';
+import Countries from './data';
+// import Container, { Panel, PanelHeader } from './styledComponents';
 
-function App() {
+const App = () => {
+  console.log(Countries.map((country) => console.log(country)));
   return (
-    <Container>
-      <Panel>
-        <PanelHeader>Iceland</PanelHeader>
-      </Panel>
-    </Container>
+    <>
+      <h1>Hello World</h1>
+    </>
   );
-}
+};
 
 export default App;
