@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Container, { Panel, PanelHeader } from './styledComponents';
 
 const CountryPanel = ({ countryName, countryImg }) => {
   return (
-    <div>
-      <h1>{countryName}</h1>
-      <img src={countryImg} alt={countryName} />
-    </div>
+    <Container>
+      <Panel style={{ backgroundImage: `url(${countryImg})` }}>
+        <PanelHeader>{countryName}</PanelHeader>
+      </Panel>
+    </Container>
   );
 };
 
