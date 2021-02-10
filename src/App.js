@@ -1,6 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import GlobalStyle from './styles/globalStyle';
+import Container from './Components/styledComponents';
 import CountryPanel from './Components/CountryPanel';
 import Countries from './data';
 
@@ -16,7 +17,7 @@ class App extends React.Component {
     return (
       <>
         <GlobalStyle />
-        {vacations}
+        <Container>{vacations}</Container>
       </>
     );
   }
