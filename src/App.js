@@ -1,26 +1,23 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prefer-stateless-function */
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalStyle from './styles/globalStyle';
-import Container from './Components/styledComponents';
-import CountryPanel from './Components/CountryPanel';
+import CountryContainer from './CountryComponents/CountryContainer';
 import Countries from './data';
 
-class App extends React.Component {
-  render() {
-    const vacations = Countries.map((country) => (
-      <CountryPanel
-        key={country.id}
-        countryName={country.name}
-        countryImg={country.img}
-      />
-    ));
-    return (
-      <>
-        <GlobalStyle />
-        <Container>{vacations}</Container>
-      </>
-    );
-  }
-}
+const App = () => {
+  const [active, setActive] = useState(true);
+
+  const clickHandler = (id) => {
+    console.log(id);
+  };
+
+  return (
+    <>
+      <GlobalStyle />
+      <CountryContainer clickHandler={clickHandler} data={Countries} />
+    </>
+  );
+};
 
 export default App;
