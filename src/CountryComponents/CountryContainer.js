@@ -8,7 +8,7 @@ import CountryPanel from './CountryPanel';
 import Container from './styledCountryComponents';
 
 const CountryCont = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [countryObj, setCountryObj] = useState(Countries);
   const clickHandler = (id) => {
     // console.log(id);
@@ -21,6 +21,7 @@ const CountryCont = () => {
       key={country.id}
       country={country}
       clickHandler={clickHandler}
+      // className={}
     />
   ));
   return <Container>{vacations}</Container>;
