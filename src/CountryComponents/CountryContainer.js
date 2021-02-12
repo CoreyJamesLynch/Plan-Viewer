@@ -9,8 +9,12 @@ import Container from './styledCountryComponents';
 
 const CountryCont = () => {
   const [active, setActive] = useState(true);
+  const [countryObj, setCountryObj] = useState(Countries);
   const clickHandler = (id) => {
-    console.log(id);
+    // console.log(id);
+    const clickCountries = [...countryObj];
+    const activeCountry = clickCountries.find((country) => country.id === id);
+    console.log(activeCountry);
   };
   const vacations = Countries.map((country) => (
     <CountryPanel
