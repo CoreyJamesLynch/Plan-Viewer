@@ -11,7 +11,7 @@ class CountryCont extends React.Component {
       <CountryPanel
         key={country.id}
         country={country}
-        clickHandler={country.clickHandler}
+        clickHandler={this.props.clickHandler}
       />
     ));
     return <Container>{vacations}</Container>;

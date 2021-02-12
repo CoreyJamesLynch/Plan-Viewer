@@ -7,7 +7,10 @@ import { Panel, PanelHeader } from './styledCountryComponents';
 
 const CountryPanel = (props) => {
   return (
-    <Panel style={{ backgroundImage: `url(${props.country.img})` }}>
+    <Panel
+      style={{ backgroundImage: `url(${props.country.img})` }}
+      onClick={() => props.clickHandler(props.country.id)}
+    >
       <PanelHeader>{props.country.name}</PanelHeader>
     </Panel>
   );
