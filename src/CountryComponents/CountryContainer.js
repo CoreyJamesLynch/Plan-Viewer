@@ -1,21 +1,25 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/prefer-stateless-function */
-import React from 'react';
+import React, { useState } from 'react';
+import Countries from '../data';
 import CountryPanel from './CountryPanel';
 import Container from './styledCountryComponents';
 
-class CountryCont extends React.Component {
-  render() {
-    const vacations = this.props.data.map((country) => (
-      <CountryPanel
-        key={country.id}
-        country={country}
-        clickHandler={this.props.clickHandler}
-      />
-    ));
-    return <Container>{vacations}</Container>;
-  }
-}
+const CountryCont = () => {
+  const [active, setActive] = useState(true);
+  const clickHandler = (id) => {
+    console.log(id);
+  };
+  const vacations = Countries.map((country) => (
+    <CountryPanel
+      key={country.id}
+      country={country}
+      clickHandler={clickHandler}
+    />
+  ));
+  return <Container>{vacations}</Container>;
+};
 
 export default CountryCont;

@@ -1,21 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prefer-stateless-function */
-import React, { useState } from 'react';
+import React from 'react';
 import GlobalStyle from './styles/globalStyle';
-import CountryContainer from './CountryComponents/CountryContainer';
-import Countries from './data';
+import CountryCont from './CountryComponents/CountryContainer';
 
 const App = () => {
-  const [active, setActive] = useState(true);
-
-  const clickHandler = (id) => {
-    console.log(id);
-  };
-
   return (
     <>
       <GlobalStyle />
-      <CountryContainer clickHandler={clickHandler} data={Countries} />
+      <CountryCont />
     </>
   );
 };
