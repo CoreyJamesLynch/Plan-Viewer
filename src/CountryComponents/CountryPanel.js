@@ -10,6 +10,7 @@ const CountryPanel = (props) => {
     <Panel
       style={{ backgroundImage: `url(${props.country.img})` }}
       onClick={() => props.clickHandler(props.country.id)}
+      className={props.className}
     >
       <PanelHeader>{props.country.name}</PanelHeader>
     </Panel>

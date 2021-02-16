@@ -17,6 +17,13 @@ const Panel = styled.div`
   margin: 10px;
   position: relative;
   transition: flex 0.7s ease-in;
+  &.active {
+    flex: 5;
+  }
+  &.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
 `;
 
 const PanelHeader = styled.h3`
