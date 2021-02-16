@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   width: 90vw;
+  @media (max-width: 480px) {
+    width: 100vw;
+  }
 `;
 
 const Panel = styled.div`
@@ -24,6 +27,12 @@ const Panel = styled.div`
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
   }
+  @media (max-width: 480px) {
+    :nth-of-type(4),
+    :nth-of-type(5) {
+      display: none;
+    }
+  } ;
 `;
 
 const PanelHeader = styled.h3`

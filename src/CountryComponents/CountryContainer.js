@@ -9,12 +9,11 @@ import Container from './styledCountryComponents';
 
 const CountryCont = () => {
   const [active, setActive] = useState(0);
-  const [countryObj, setCountryObj] = useState(Countries);
+
   const clickHandler = (id) => {
-    // const clickCountries = [...countryObj];
-    // const activeCountry = clickCountries.find((country) => country.id === id);
     setActive(id);
   };
+
   const vacations = Countries.map((country) => (
     <CountryPanel
       key={country.id}
@@ -23,7 +22,7 @@ const CountryCont = () => {
       className={active === country.id ? 'active' : ''}
     />
   ));
-  console.log(vacations);
+
   return <Container>{vacations}</Container>;
 };
 
